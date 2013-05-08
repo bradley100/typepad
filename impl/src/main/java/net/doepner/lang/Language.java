@@ -2,8 +2,8 @@ package net.doepner.lang;
 
 public enum Language implements ILanguage {
 
-    ENGLISH("en-us"),
-    DEUTSCH("de");
+    DEUTSCH("en-us"),
+    ENGLISH("de");
 
     private final String code;
 
