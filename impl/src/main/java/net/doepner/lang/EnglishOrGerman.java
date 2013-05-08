@@ -10,17 +10,17 @@ public class EnglishOrGerman implements LanguageChanger {
     private final ChangePropagator<ILanguage> propagator =
         new ChangeSupport<>();
 
-    private boolean deutsch;
+    private boolean english;
 
     @Override
     public ILanguage getLanguage() {
-        return deutsch ? Language.DEUTSCH : Language.ENGLISH;
+        return english ? Language.ENGLISH : Language.DEUTSCH;
     }
 
     @Override
     public void changeLanguage() {
         final ILanguage before = getLanguage();
-        deutsch = !deutsch;
+        english = !english;
         final ILanguage after = getLanguage();
         propagator.handleChange(before, after);
     }
